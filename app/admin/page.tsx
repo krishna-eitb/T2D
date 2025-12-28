@@ -103,9 +103,9 @@ const admin = await getAdminFromCookie();
 
   const page = parseInt(searchParams?.page || "1");
   const { clients, totalPages, currentPage } = await getClients(page, 10);
-  
+
   return (
-    <AdminPageWrapper>
+    // <AdminPageWrapper>
       <div className="min-h-screen bg-[#0B0B0D] flex">
         {/* Sidebar */}
         <aside className="w-64 bg-[#0C0C0F] border-r border-white/10 p-6 flex flex-col">
@@ -143,7 +143,7 @@ const admin = await getAdminFromCookie();
           </div>
         </main>
       </div>
-    </AdminPageWrapper>
+    // </AdminPageWrapper>
   );
 }
 
