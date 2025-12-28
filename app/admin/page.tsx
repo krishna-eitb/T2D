@@ -87,19 +87,23 @@ import { redirect } from "next/navigation";
 import { getAdminFromCookie } from "@/lib/auth";
 import LogoutButton from "./LogoutButton";
 
+export const dynamic = "force-dynamic";
 
 interface AdminPageProps {
   searchParams?: { page?: string };
 }
 
 export default async function AdminPage({ searchParams }: AdminPageProps) {
-  const page = parseInt(searchParams?.page || "1");
-  const { clients, totalPages, currentPage } = await getClients(page, 10);
-const admin = getAdminFromCookie();
+  
+const admin = await getAdminFromCookie();
 
   if (!admin) {
     redirect("/login");
   }
+
+  const page = parseInt(searchParams?.page || "1");
+  const { clients, totalPages, currentPage } = await getClients(page, 10);
+  
   return (
     <AdminPageWrapper>
       <div className="min-h-screen bg-[#0B0B0D] flex">
