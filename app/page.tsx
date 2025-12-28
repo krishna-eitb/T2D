@@ -1,22 +1,3 @@
-// import dbConnect  from "../lib/db";
-// import Client from "@/models/Client";
-// import Hero from "./components/Hero";
-// import ClientList from "./components/ClientList";
-
-// export default async function HomePage() {
-//   await dbConnect(); 
-//   const clients = await Client.find().lean();
-//   // krishnaeitbtest_db_user
-//   // b6gNu9QDl1UhEetI
-//   // mongodb+srv://krishnaeitbtest_db_user:b6gNu9QDl1UhEetI@client-directory.diatflt.mongodb.net/?appName=client-directory
-
-//   return (
-//     <>
-//       <Hero />
-//       <ClientList clients={clients} />
-//     </>
-//   );
-// }
 import ClientList from "./components/ClientList";
 import Hero from "./components/Hero";
 import { getClients } from "@/lib/actions/getClients";
