@@ -80,14 +80,16 @@
 //     </div>
 //   );
 // }
-import AdminPageWrapper from "./AdminPageWrapper";
+// import AdminPageWrapper from "./AdminPageWrapper";
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
 import AdminClientList from "./AdminClientList";
 import { getClients } from "@/lib/actions/getClients";
 import { redirect } from "next/navigation";
 import { getAdminFromCookie } from "@/lib/auth";
 import LogoutButton from "./LogoutButton";
 
-export const dynamic = "force-dynamic";
+
 
 interface AdminPageProps {
   searchParams?: { page?: string };
