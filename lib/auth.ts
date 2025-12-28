@@ -5,7 +5,7 @@ const JWT_SECRET = process.env.JWT_SECRET!;
 
 export async function getAdminFromCookie() {
   const cookieStore = await cookies(); // ✅ await is REQUIRED
-  const token = cookieStore.get("admin-token")?.value;
+  const token = cookieStore.get("admin_token")?.value;
 
   if (!token) return null;
 

@@ -81,8 +81,10 @@
 //   );
 // }
 // import AdminPageWrapper from "./AdminPageWrapper";
+export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 export const revalidate = 0;
+
 import AdminClientList from "./AdminClientList";
 import { getClients } from "@/lib/actions/getClients";
 import { redirect } from "next/navigation";
